@@ -1,0 +1,14 @@
+# Create HTML Markup
+ 1. create a main container
+ 2. main container should have three sub division
+    A. first sub division should have
+       i. a heading
+       ii. input field
+       iii. submit button
+    B. second sub division should have
+       i. a heading for the unordered list
+       ii. unordered list tag (content will be added from the DOM)
+    C. third sub division to have
+       i. a heading
+       ii. an input field
+       iii. and an button (anchor tag);
