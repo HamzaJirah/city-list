@@ -10,4 +10,13 @@ body {
   background-color: #E6E7E8;
   font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.container {
+  margin: 20% auto;
+  height: 400px;
+  width: 500px;
+  border: 1px solid #231F20;
+  -webkit-box-shadow: 2px 2px #58595B;
+          box-shadow: 2px 2px #58595B;
+}
 /*# sourceMappingURL=main.css.map */

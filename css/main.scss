@@ -2,9 +2,9 @@
 
 // Sass map
 $colors: (
-  primary: #AEE8E4,
-  white: #fff,
-  dark-grey: #414042,
+  white: #FFF,
+  primary-grey: #231F20,
+  secondary-grey: #58595B,
   light-grey: #E6E7E8
 );
 
@@ -23,4 +23,13 @@ $colors: (
 body {
   background-color: color($colors, light-grey);
   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+// Main content
+.container {
+  margin: 20% auto;
+  height: 400px;
+  width: 500px;
+  border: 1px solid color($colors, primary-grey);
+  box-shadow: 2px 2px color($colors, secondary-grey);
 }
