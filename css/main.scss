@@ -2,9 +2,10 @@
 
 // Sass map
 $colors: (
-  white: #FFF,
+  white-color: #FFF,
   primary-grey: #231F20,
   secondary-grey: #58595B,
+  tertiary-color: #242240,
   light-grey: #E6E7E8
 );
 
@@ -23,6 +24,7 @@ $colors: (
 body {
   background-color: color($colors, light-grey);
   font-family: 'Open Sans Condensed', sans-serif;
+  color: color($colors, white-color);
 }
 
 // Main content
@@ -30,6 +32,72 @@ body {
   margin: 20% auto;
   height: 400px;
   width: 500px;
+  background: linear-gradient(to right, #606C88, color($colors, light-grey));
   border: 1px solid color($colors, primary-grey);
-  box-shadow: 2px 2px color($colors, secondary-grey);
+  box-shadow: 2px 2px color($colors, secondary-grey); 
+}
+
+.create-city {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: .5rem;
+  padding: 2rem;
+  text-align: center;
+
+  .app-title {
+    font-size: 2.5rem;
+  }
+}
+
+.city-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: .6rem;
+
+  .city-name {
+    height: 1.5rem;
+    font-size: 1.2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid color($colors, tertiary-color);
+    background: color($colors, light-grey);
+    outline: none;
+  }
+
+  .city-name:focus {
+    height: 2rem;
+    color: color($colors, tertiary-color);
+    font-size: 1.5rem;
+  }
+
+  ::placeholder {
+    color: color($colors, tertiary-color);
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  .add-city {
+    width: 7rem;
+    justify-self: center;
+    font-size: 1.1rem;
+    padding: 8px;
+    border-radius: 5px;
+    background: color($colors, tertiary-color);
+    border-style: none;
+    color: color($colors, white-color);
+  }
+
+  .add-city:hover{
+    cursor: pointer;
+    background: none;
+    border: 2px solid color($colors, tertiary-color);
+  }
+}
+
+.display-city {
+  display: grid;
+  
 }
