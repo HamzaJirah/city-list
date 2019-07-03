@@ -10,8 +10,9 @@
 </head>
 <body>
   <div class="container">
+    <h3 class="app-title">City to Visit</h3>
     <section class="create-city">
-      <h3 class="app-title">City to Visit</h3>
+      <h3 class="section-title">Add City</h3>
       <form class="city-form">
         <label for="city"></label>
         <input class="city-name" type="text" name="city" placeholder="type name of city">
@@ -19,20 +20,22 @@
       </form>
     </section>
     <section class="display-city">
-      <h5>List of Cities</h5>
+      <h5 class="city-list">List of Cities</h5>
       <aside class="collection">
         <div class="city-collection">
           <p class="text-city">Some Text</p>
-          <i class="fas fa-trash"></i>
+          <i class="fas fa-trash delete-city"></i>
+        </div>
+        <div class="city-collection">
+          <p class="text-city">Some Text</p>
+          <i class="fas fa-trash delete-city"></i>
         </div>
       </aside>
+      <button class="delete-all">Clear All</button>
     </section>
     <section class="find-city">
-      <h5>Search City Name</h5>
-      <input type="text" id="search-city">
-    </section>
-    <section class="delete-all-cities">
-      <button class="delete-cities">Clear All</button>
+      <h5 class="filter-heading">Search City Name</h5>
+      <input type="text" class="filter-input">
     </section>
   </div>
   

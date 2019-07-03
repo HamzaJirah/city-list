@@ -6,7 +6,9 @@ $colors: (
   primary-grey: #231F20,
   secondary-grey: #58595B,
   tertiary-color: #242240,
-  light-grey: #E6E7E8
+  light-grey: #E6E7E8,
+  add-button: #4BB462,
+  delete-button: #F6522E
 );
 
 // Sass function
@@ -30,11 +32,16 @@ body {
 // Main content
 .container {
   margin: 20% auto;
-  height: 400px;
-  width: 500px;
+  max-width: 600px;
   background: linear-gradient(to right, #606C88, color($colors, light-grey));
-  border: 1px solid color($colors, primary-grey);
+  border: 3px solid color($colors, primary-grey);
   box-shadow: 2px 2px color($colors, secondary-grey); 
+  z-index: 1;
+
+  .app-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .create-city {
@@ -43,10 +50,12 @@ body {
   grid-template-rows: repeat(4, auto);
   grid-gap: .5rem;
   padding: 2rem;
+  margin: 5px 25px;
   text-align: center;
+  border: 1.5px solid color($colors, tertiary-color);
 
-  .app-title {
-    font-size: 2.5rem;
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 
@@ -85,7 +94,7 @@ body {
     font-size: 1.1rem;
     padding: 8px;
     border-radius: 5px;
-    background: color($colors, tertiary-color);
+    background: color($colors, add-button);
     border-style: none;
     color: color($colors, white-color);
   }
@@ -93,12 +102,98 @@ body {
   .add-city:hover{
     cursor: pointer;
     background: none;
-    border: 2px solid color($colors, tertiary-color);
+    border: 2px solid color($colors, add-button);
+    transition: all 0.5s;
   }
 }
 
 .display-city {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(2, 1fr); 
+  padding: 2rem;
+  margin: 0 25px;
+  border: 1.5px solid color($colors, tertiary-color);
+
+  .city-list {
+    font-size: 1.5rem;
+    justify-self: center;
+  }
+
+  .collection .city-collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    border: 1px solid color($colors, tertiary-color);
+    padding: 3px;
+    margin-top: 5px;
+
+    .text-city {
+      font-size: 1.2rem;
+    }
+
+    .delete-city {
+      justify-self: end;
+      align-self: center;
+      color: color($colors, delete-button);
+    }
+
+    .delete-city:hover {
+      cursor: pointer;
+      color: rgb(214, 125, 125);
+      transition: all 0.5s;
+    }
+  } 
+
+  .delete-all {
+    width: 7rem;
+    justify-self: center;
+    font-size: 1.1rem;
+    padding: 8px;
+    border-radius: 5px;
+    background: color($colors, delete-button);
+    border-style: none;
+    color: color($colors, white-color);
+  }
+
+  .delete-all:hover{
+    cursor: pointer;
+    background: none;
+    border: 2px solid color($colors, delete-button);
+    transition: all 0.5s;
+  }
+}
+
+.find-city {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 1.5px solid color($colors, tertiary-color);
+  padding: 2rem;
+  margin: 5px 25px;
+
+  .filter-heading {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.5rem;
+  }
+
+  .filter-input {
+    height: 1.5rem;
+    font-size: 1.2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid color($colors, tertiary-color);
+    background: color($colors, light-grey);
+    outline: none;
+  }
+
+  .filter-input:focus {
+    height: 2rem;
+    color: color($colors, tertiary-color);
+    font-size: 1.5rem;
+  }
 }
