@@ -12,3 +12,10 @@ $colors: (
 @function color($color-map, $color-name){
   @return map-get($color-map, $color-name);
 };
+
+// remove browser default styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
