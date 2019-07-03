@@ -111,5 +111,9 @@ body {
 .display-city {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
 }
 /*# sourceMappingURL=main.css.map */
