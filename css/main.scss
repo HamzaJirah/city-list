@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+// Sass map
+$colors: (
+  primary: #AEE8E4,
+  white: #fff,
+  dark-grey: #414042,
+  light-grey: #E6E7E8
+);
+
+// Sass function
+@function color($color-map, $color-name){
+  @return map-get($color-map, $color-name);
+};
