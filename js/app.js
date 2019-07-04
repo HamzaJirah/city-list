@@ -11,6 +11,8 @@ loadEventListeners();
 function loadEventListeners(){
   // addCity event listener
   form.addEventListener('submit', addCity);
+  // removeCity event listener
+  listOfCities.addEventListener('click', removeCity);
 }
 
 function addCity(e){
@@ -43,3 +45,13 @@ function addCity(e){
 
   e.preventDefault();
 }
+
+// remove city function 
+function removeCity(e){
+  if(e.target.classList.contains('delete-city')){
+    if(confirm('Do you want to delete the city?')){
+      e.target.previousSibling.parentElement.remove();
+    }
+  }
+}
+
