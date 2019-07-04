@@ -3,6 +3,7 @@ const form = document.querySelector('.city-form');
 const inputCity = document.querySelector('.city-name');
 const listOfCities = document.querySelector('.collection');
 const deleteAllCities = document.querySelector('.delete-all');
+const searchCity = document.querySelector('.filter-input')
 
 // console.log(inputCity);
 // invoke load event listeners function 
@@ -16,6 +17,8 @@ function loadEventListeners(){
   listOfCities.addEventListener('click', removeOneCity);
   //delete all event listener
   deleteAllCities.addEventListener('click', removeAllCity);
+  // search city 
+  searchCity.addEventListener('keyup', filterCity);
 }
 
 function addCity(e){
@@ -61,5 +64,19 @@ function removeOneCity(e){
 // remove all city fuction 
 function removeAllCity(){
   listOfCities.innerHTML = '';
+}
+
+// search/filter city
+function filterCity(e){
+  const text = e.target.value.toLowerCase();
+
+  document.querySelectorAll('.city-collection').forEach(function(city){
+    const item = city.firstChild.textContent;
+    if(item.toLowerCase().indexOf(text) != -1){
+      city.style.display = 'block';
+    } else {
+      city.style.display = 'none';
+    }
+  });
 }
 
