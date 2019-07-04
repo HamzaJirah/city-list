@@ -63,7 +63,9 @@ function removeOneCity(e){
 
 // remove all city fuction 
 function removeAllCity(){
-  listOfCities.innerHTML = '';
+  if(confirm('Do you want to delete all?')){
+    listOfCities.innerHTML = '';
+  }
 }
 
 // search/filter city
