@@ -2,6 +2,7 @@
 const form = document.querySelector('.city-form');
 const inputCity = document.querySelector('.city-name');
 const listOfCities = document.querySelector('.collection');
+const deleteAllCities = document.querySelector('.delete-all');
 
 // console.log(inputCity);
 // invoke load event listeners function 
@@ -54,4 +55,5 @@ function removeCity(e){
     }
   }
 }
+
 
