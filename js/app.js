@@ -75,7 +75,8 @@ function filterCity(e){
   document.querySelectorAll('.city-collection').forEach(function(city){
     const item = city.firstChild.textContent;
     if(item.toLowerCase().indexOf(text) != -1){
-      city.style.display = 'block';
+      city.style.display = 'grid';
+      city.style.gridTemplateColumns = '1fr 1fr';
     } else {
       city.style.display = 'none';
     }
