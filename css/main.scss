@@ -8,7 +8,8 @@ $colors: (
   tertiary-color: #242240,
   light-grey: #E6E7E8,
   add-button: #4BB462,
-  delete-button: #F6522E
+  delete-button: #F6522E,
+  bg-color: #606C88
 );
 
 // Sass function
@@ -32,11 +33,11 @@ body {
 // Main content
 .container {
   margin: 20% auto;
-  max-width: 600px;
+  max-width: 320px;
+  min-height: 100vh;
   background: linear-gradient(to right, #606C88, color($colors, light-grey));
-  border: 3px solid color($colors, primary-grey);
-  box-shadow: 2px 2px color($colors, secondary-grey); 
-  z-index: 1;
+  box-shadow: 0 0 2px 2px color($colors, secondary-grey); 
+  padding-bottom: 5px;
 
   .app-title {
     font-size: 2.5rem;
@@ -52,7 +53,8 @@ body {
   padding: 2rem;
   margin: 5px 25px;
   text-align: center;
-  border: 1.5px solid color($colors, tertiary-color);
+  background-color: color($colors, bg-color);
+  box-shadow: 0 0 2px 2px color($colors, secondary-grey);
 
   .section-title {
     font-size: 1.5rem;
@@ -62,8 +64,8 @@ body {
 .city-form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-gap: .6rem;
+  align-items: center;
 
   .city-name {
     height: 1.5rem;
@@ -74,12 +76,6 @@ body {
     border-bottom: 2px solid color($colors, tertiary-color);
     background: color($colors, light-grey);
     outline: none;
-  }
-
-  .city-name:focus {
-    height: 2rem;
-    color: color($colors, tertiary-color);
-    font-size: 1.5rem;
   }
 
   ::placeholder {
@@ -113,7 +109,8 @@ body {
   grid-template-columns: repeat(1, 1fr);
   padding: 2rem;
   margin: 0 25px;
-  border: 1.5px solid color($colors, tertiary-color);
+  background-color: color($colors, bg-color);
+  box-shadow: 0 0 2px 2px color($colors, secondary-grey);
 
   .city-list {
     font-size: 1.5rem;
@@ -166,10 +163,10 @@ body {
 
 .find-city {
   display: grid;
-  display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  border: 1.5px solid color($colors, tertiary-color);
+  grid-template-rows: repeat(2, 1fr);
+  background-color: color($colors, bg-color);
+  box-shadow: 0 0 2px 2px color($colors, secondary-grey);
   padding: 2rem;
   margin: 5px 25px;
 
@@ -189,10 +186,5 @@ body {
     background: color($colors, light-grey);
     outline: none;
   }
-
-  .filter-input:focus {
-    height: 2rem;
-    color: color($colors, tertiary-color);
-    font-size: 1.5rem;
-  }
 }
+

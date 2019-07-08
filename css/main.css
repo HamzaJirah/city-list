@@ -14,13 +14,13 @@ body {
 
 .container {
   margin: 20% auto;
-  max-width: 600px;
+  max-width: 320px;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(#606C88), to(#E6E7E8));
   background: linear-gradient(to right, #606C88, #E6E7E8);
-  border: 3px solid #231F20;
-  -webkit-box-shadow: 2px 2px #58595B;
-          box-shadow: 2px 2px #58595B;
-  z-index: 1;
+  -webkit-box-shadow: 0 0 2px 2px #58595B;
+          box-shadow: 0 0 2px 2px #58595B;
+  padding-bottom: 5px;
 }
 
 .container .app-title {
@@ -39,7 +39,9 @@ body {
   padding: 2rem;
   margin: 5px 25px;
   text-align: center;
-  border: 1.5px solid #242240;
+  background-color: #606C88;
+  -webkit-box-shadow: 0 0 2px 2px #58595B;
+          box-shadow: 0 0 2px 2px #58595B;
 }
 
 .create-city .section-title {
@@ -51,9 +53,10 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   grid-gap: .6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .city-form .city-name {
@@ -65,12 +68,6 @@ body {
   border-bottom: 2px solid #242240;
   background: #E6E7E8;
   outline: none;
-}
-
-.city-form .city-name:focus {
-  height: 2rem;
-  color: #242240;
-  font-size: 1.5rem;
 }
 
 .city-form ::-webkit-input-placeholder {
@@ -125,7 +122,9 @@ body {
       grid-template-columns: repeat(1, 1fr);
   padding: 2rem;
   margin: 0 25px;
-  border: 1.5px solid #242240;
+  background-color: #606C88;
+  -webkit-box-shadow: 0 0 2px 2px #58595B;
+          box-shadow: 0 0 2px 2px #58595B;
 }
 
 .display-city .city-list {
@@ -188,12 +187,13 @@ body {
 .find-city {
   display: -ms-grid;
   display: grid;
-  display: grid;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  border: 1.5px solid #242240;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  background-color: #606C88;
+  -webkit-box-shadow: 0 0 2px 2px #58595B;
+          box-shadow: 0 0 2px 2px #58595B;
   padding: 2rem;
   margin: 5px 25px;
 }
@@ -216,11 +216,5 @@ body {
   border-bottom: 2px solid #242240;
   background: #E6E7E8;
   outline: none;
-}
-
-.find-city .filter-input:focus {
-  height: 2rem;
-  color: #242240;
-  font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
