@@ -52,7 +52,7 @@ body {
   grid-gap: .5rem;
   padding: 2rem;
   margin: 5px 25px;
-  text-align: center;
+  justify-items: center;
   background-color: color($colors, bg-color);
   box-shadow: 0 0 2px 2px color($colors, secondary-grey);
 
@@ -65,11 +65,12 @@ body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: .6rem;
-  align-items: center;
+  justify-items: center;
 
   .city-name {
     height: 1.5rem;
     font-size: 1.2rem;
+    width: 200px;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -86,7 +87,6 @@ body {
 
   .add-city {
     width: 7rem;
-    justify-self: center;
     font-size: 1.1rem;
     padding: 8px;
     border-radius: 5px;
@@ -178,6 +178,7 @@ body {
 
   .filter-input {
     height: 1.5rem;
+    width: 200px;
     font-size: 1.2rem;
     border-top: none;
     border-right: none;
