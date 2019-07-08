@@ -123,8 +123,6 @@ body {
   grid-gap: 10px;
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   padding: 2rem;
   margin: 0 25px;
   border: 1.5px solid #242240;
@@ -132,8 +130,7 @@ body {
 
 .display-city .city-list {
   font-size: 1.5rem;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  text-align: center;
 }
 
 .display-city .collection .city-collection {
@@ -145,7 +142,7 @@ body {
       grid-template-rows: repeat(1, 1fr);
   border: 1px solid #242240;
   padding: 3px;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .display-city .collection .city-collection .text-city {
