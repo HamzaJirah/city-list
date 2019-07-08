@@ -1,6 +1,7 @@
+// Imported google font
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 
-// Sass map
+// Sass colors map
 $colors: (
   white-color: #FFF,
   primary-grey: #231F20,
@@ -12,7 +13,7 @@ $colors: (
   bg-color: #606C88
 );
 
-// Sass function
+// Sass colors function
 @function color($color-map, $color-name){
   @return map-get($color-map, $color-name);
 };
@@ -45,6 +46,7 @@ body {
   }
 }
 
+// Add City
 .create-city {
   display: grid;
   grid-template-columns: repeat(1, auto);
@@ -103,6 +105,7 @@ body {
   }
 }
 
+// List of cities
 .display-city {
   display: grid;
   grid-gap: 10px;
@@ -161,6 +164,7 @@ body {
   }
 }
 
+// Seacrh city name
 .find-city {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
